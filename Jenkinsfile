@@ -10,8 +10,8 @@ pipeline {
             steps {
                 sh 'ls'
                 sh 'pwd'
-                sh 'scp -r /var/lib/jenkins/workspace root@65.2.35.96:/root/home'
-                
+                #sh 'scp -r /var/lib/jenkins/workspace root@65.2.35.96:/root/home'
+                 sh 'scp -r $(pwd)/* root@65.2.35.96:/root/home'
                 
             }
         }        
